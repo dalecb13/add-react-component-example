@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adding React Components</title>
+
+    <!-- Add separate pre-defined CSS because I'm lazy -->
+    <!-- Tailwind CSS: https://tailwindcss.com/docs/installation/ -->
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="flex items-center justify-between flex-wrap bg-red-400 p-6">
+      <ul class="flex">
+        <li class="m-2 mr-6">
+          <!-- No href disables the link--makes it unclickable -->
+          <a class="text-blue-500 hover:text-blue-800" href="../home.html"
+            >Home</a
+          >
+        </li>
+        <li class="m-2 mr-6">
+          <!-- No href disables the link--makes it unclickable -->
+          <a class="text-blue-500 hover:text-blue-800 cursor-default"
+            >Project 1</a
+          >
+        </li>
+        <li class="m-2 mr-6">
+          <a class="text-blue-500 hover:text-blue-800" href="./about.html"
+            >About</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="min-h-screen"></section>
+
+    <!-- Footer -->
+    <div id="footer_placeholder"></div>
+  </body>
+</html>

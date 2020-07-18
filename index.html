@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adding React Components</title>
+
+    <!-- Add separate pre-defined CSS because I'm lazy -->
+    <!-- Tailwind CSS: https://tailwindcss.com/docs/installation/ -->
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Also add JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./scripts/lorem_ipsum_generator.js"></script>
+  </head>
+  <body class="flex flex-col justify-between min-h-screen">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-200 p-6">
+      <ul class="flex">
+        <li class="m-2 mr-6">
+          <!-- No href disables the link--makes it unclickable -->
+          <a class="text-blue-500 hover:text-blue-800 cursor-default">Home</a>
+        </li>
+        <li class="m-2 mr-6">
+          <a
+            class="text-blue-500 hover:text-blue-800"
+            href="./pages/project1.html"
+            >Project 1</a
+          >
+        </li>
+        <li class="m-2 mr-6">
+          <a class="text-blue-500 hover:text-blue-800" href="./pages/about.html"
+            >About</a
+          >
+        </li>
+      </ul>
+
+      <div id="clock"></div>
+    </nav>
+
+    <!-- Content -->
+    <section class="main-content min-h-full">
+      <div class="banner-section p-8">
+        <h1>Recent Blog Posts</h1>
+
+        <div class="blog-posts">
+          <div id="blog-post"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer_placeholder"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Reusable React (without JSX) Components -->
+    <script src="./react_scripts/without_jsx/clock.js"></script>
+
+    <!-- Reusable JSX Components -->
+
+    <!-- Blog Post Card -->
+    <script type="text/babel"></script>
+
+    <!-- Footer -->
+    <script type="text/babel">
+      const date = new Date();
+      const year = date.getFullYear();
+      ReactDOM.render(
+        <div className="ex-footer flex flex-row justify-between m-0 p-4 bg-gray-800">
+          <div id="left-footer-section" className="footer-section">
+            <span className="text-gray-100">&copy; Public Domain, {year}</span>
+          </div>
+          <div id="center-footer-section" className="footer-section"></div>
+          <div id="right-footer-section" className="footer-section">
+            <p className="text-gray-100">
+              This code on{" "}
+              <a
+                className="text-teal-200 hover:text-orange-500"
+                href="https://github.com/dalecb13/add-react-component-example"
+              >
+                GitHub
+              </a>
+            </p>
+          </div>
+        </div>,
+        document.getElementById("footer_placeholder")
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+
+    <!-- Add separate pre-defined CSS because I'm lazy -->
+    <!-- Tailwind CSS: https://tailwindcss.com/docs/installation/ -->
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="flex items-center justify-between flex-wrap bg-purple-500 p-6">
+      <ul class="flex">
+        <li class="m-2 mr-6">
+          <a class="text-gray-900 hover:text-blue-800" href="../index.html"
+            >Home</a
+          >
+        </li>
+        <li class="m-2 mr-6">
+          <a class="text-gray-900 hover:text-blue-800" href="./project1.html"
+            >Project 1</a
+          >
+        </li>
+        <li class="m-2 mr-6">
+          <!-- No href disables the link--makes it unclickable -->
+          <a class="text-gray-900 hover:text-blue-800 cursor-default">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="p-8">
+      <h1 class="text-4xl">About You!</h1>
+
+      <article id="fork-section">
+        <p>
+          If you want to fill this out and customize it with your own data, feel
+          free to fork your own project and rehost it on GitHub Pages
+        </p>
+      </article>
+
+      <article>
+        <h1>Original Author</h1>
+
+        <p>
+          The original author is a software engineer with experience all around
+          the stack, including
+        </p>
+
+        <ul>
+          <li>Front-end development</li>
+          <li>REST API development</li>
+          <li>Data Analytics</li>
+          <li>CI/CD</li>
+          <li>Cloud architecture</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer_placeholder"></div>
+  </body>
+</html>
