@@ -27,7 +27,11 @@ class ClockComponent extends React.Component {
   }
 
   render() {
-    return e("p", null, `${this.state.date.toLocaleTimeString()}`);
+    return e(
+      "p",
+      null,
+      `The current time is: ${this.state.date.toLocaleTimeString()}`
+    );
   }
 }
 
