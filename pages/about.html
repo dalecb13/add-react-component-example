@@ -33,35 +33,78 @@
     </nav>
 
     <!-- Main Content -->
-    <section class="p-8">
-      <h1 class="text-4xl">About You!</h1>
 
-      <article id="fork-section">
-        <p>
-          If you want to fill this out and customize it with your own data, feel
-          free to fork your own project and rehost it on GitHub Pages
-        </p>
-      </article>
+    <div class="flex flex-row">
+      <div class="left-spacer w-64"></div>
 
-      <article>
-        <h1>Original Author</h1>
+      <!-- Center content -->
+      <div class="reading-content flex-col">
+        <section class="p-8">
+          <h1 class="text-4xl">About</h1>
 
-        <p>
-          The original author is a software engineer with experience all around
-          the stack, including
-        </p>
+          <article id="fork-section">
+            <p>
+              If you want to fill this out and customize it with your own data,
+              feel free to fork your own project and rehost it on GitHub Pages
+            </p>
+          </article>
 
-        <ul>
-          <li>Front-end development</li>
-          <li>REST API development</li>
-          <li>Data Analytics</li>
-          <li>CI/CD</li>
-          <li>Cloud architecture</li>
-        </ul>
-      </article>
-    </section>
+          <article>
+            <h1>Hodor</h1>
+
+            <p>
+              Hodor hodor, hodor hodor -- hodor hodor. Hodor hodor hodoooor
+              hodor. Hodor hodor hodor...
+            </p>
+
+            <ul>
+              <li>Hodor</li>
+              <li>Hodor hodor hodor</li>
+              <li>Hodor, hodor hodor hodor</li>
+              <li>Hodor</li>
+              <li>Hodor hodor?</li>
+            </ul>
+          </article>
+        </section>
+
+        <div class="about_banner">
+          <h1>Creating a Reusable React Component without JSX</h1>
+          <p>
+            This is some inner HTML text which can be accessed on the
+            JavaScript-side. After getting this text we can pass it back into
+            the React component we want to create
+          </p>
+        </div>
+
+        <div class="about_banner">
+          Another banner with other text
+        </div>
+
+        <div class="about_banner">
+          Third banner with different text
+        </div>
+      </div>
+
+      <div class="right-spacer w-64"></div>
+    </div>
 
     <!-- Footer -->
     <div id="footer_placeholder"></div>
+
+    <!--- Scripts -->
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Reusable Components -->
+    <script src="../react_scripts/without_jsx/about_banner.js"></script>
   </body>
 </html>

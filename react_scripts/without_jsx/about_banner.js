@@ -9,27 +9,28 @@ const e = React.createElement;
 class AboutBanner extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date() };
-  }
-
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      date: new Date(),
-    });
+    console.log("e?", JSON.stringify(props));
   }
 
   render() {
-    return e("p", null, `${this.state.date.toLocaleTimeString()}`);
+    return e(
+      "section",
+      {
+        className: "p-8 ",
+      },
+      `Lol deserved`
+    );
   }
 }
 
-const domContainer = document.querySelector(".about_banner");
-ReactDOM.render(e(AboutBanner), domContainer);
+var AboutBannerFactory = React.createFactory(AboutBanner);
+
+const elements = document.querySelectorAll(".about_banner");
+elements.forEach((domContainer) => {
+  const innerHtml = domContainer.innerHTML;
+  console.log("innerHtml", innerHtml);
+  ReactDOM.render(
+    e(AboutBannerFactory({ originalText: innerHtml })),
+    domContainer
+  );
+});
